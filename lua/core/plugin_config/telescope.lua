@@ -1,4 +1,6 @@
 local builtin = require('telescope.builtin')
+require('telescope').load_extension('notify')
+--require('telescope').extensions.notify.notify(opts)
 
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
