@@ -8,6 +8,6 @@ require("core.plugin_config.telescope")
 require("core.plugin_config.treesitter")
 require("core.plugin_config.which-key")
 require("core.plugin_config.dap_config")
---require("core.plugin_config.rust_config")
+require("core.plugin_config.noice")
 require("core.plugin_config.mason")
 

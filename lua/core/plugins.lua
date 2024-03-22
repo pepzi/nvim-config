@@ -120,6 +120,7 @@ local plugins = {
       })
     end
   },
+  'nvim-telescope/telescope-ui-select.nvim',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
