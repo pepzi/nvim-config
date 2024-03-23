@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 --  'wbthomason/packer.nvim',
-  'ellisonleao/gruvbox.nvim',
+--  'ellisonleao/gruvbox.nvim',
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
@@ -110,6 +111,10 @@ local plugins = {
   'rafamadriz/friendly-snippets',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
   'neovim/nvim-lspconfig',
   {
     'mrded/nvim-lsp-notify',
@@ -129,6 +134,21 @@ local plugins = {
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
+  {
+  "epwalsh/obsidian.nvim",
+   version = "*",
+   lazy = true,
+   event = {
+     "BufReadPre " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
+     "BufNewFile " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
+   },
+   dependencies = {
+     "nvim-lua/plenary.nvim",
+     "nvim-telescope/telescope.nvim",
+     "nvim-treesitter/nvim-treesitter",
+     "hrsh7th/nvim-cmp",
+    },
   },
 }
 

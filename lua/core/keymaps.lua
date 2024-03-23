@@ -24,3 +24,26 @@ vim.api.nvim_set_keymap(
   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
   { noremap = true }
 )
+
+vim.keymap.set("n", "<space>oo", ":ObsidianQuickSwitch<CR>", { desc = "QuickSwitch" })
+vim.keymap.set("n", "<space>ot", ":ObsidianToday<CR>", { desc = "Today" })
+vim.keymap.set("n", "<space>olf", ":ObsidianFollowLink<CR>", { desc = "Follow Link" })
+vim.keymap.set("n", "<space>olb", ":ObsidianBacklinks<CR>", { desc = "Backlinks" })
+vim.keymap.set("n", "<space>oc", ":ObsidianCheck<CR>", { desc = "Check" })
+vim.keymap.set("n", "<space>os", ":ObsidianSearch<CR>", { desc = "Search" })
+vim.keymap.set("n", "<space>or", ":ObsidianRename<CR>", { desc = "Rename" })
+vim.keymap.set("n", "<space>oy", ":ObsidianYesterday<CR>", { desc = "Yesterday" })
+vim.keymap.set("n", "<space>op", ":ObsidianPasteImg<CR>", { desc = "Paste Image" })
+vim.keymap.set("n", "<space>od", ":ObsidianDailies<CR>", { desc = "Dailies" })
+vim.keymap.set("n", "<space>og", ":ObsidianTags<CR>", { desc = "Ta[g]s" })
+vim.keymap.set("n", "<space>om", ":ObsidianTomorrow<CR>", { desc = "To[m]orrow" })
+vim.keymap.set("n", "<space>ow", ":ObsidianWorkspace<CR>", { desc = "Workspace" })
+-- vim.keymap.set("n", "<space>o", ":Obsidian<CR>", { desc = "" })
+-- ObsidianDebug
+-- ObsidianExtractNote
+-- ObsidianLink
+-- ObsidianLinkNew
+-- ObsidianLinks
+-- ObsidianNew
+-- ObsidianOpen
+-- ObsidianTemplate

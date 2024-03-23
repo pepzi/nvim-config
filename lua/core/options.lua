@@ -15,4 +15,5 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+vim.opt.conceallevel = 1
 vim.wo.number = true
