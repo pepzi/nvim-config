@@ -13,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
---  'wbthomason/packer.nvim',
+  --  'wbthomason/packer.nvim',
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -21,6 +21,9 @@ local plugins = {
   'nvim-treesitter/nvim-treesitter',
   'folke/which-key.nvim',
   'echasnovski/mini.nvim',
+  "tpope/vim-dadbod",
+  "kristijanhusak/vim-dadbod-completion",
+  "kristijanhusak/vim-dadbod-ui",
   'tpope/vim-fugitive',
   'tpope/vim-commentary',
   {
@@ -81,23 +84,23 @@ local plugins = {
     },
     config = function(_, opts)
       vim.g.rustaceanvim = vim.tbl_deep_extend("force",
-        {},
-        opts or {})
+      {},
+      opts or {})
     end
   },
   {
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
-  dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
     }
   },
   {
@@ -144,18 +147,18 @@ local plugins = {
     event = 'BufEnter'
   },
   {
-  "epwalsh/obsidian.nvim",
-   version = "*",
-   lazy = true,
-   event = {
-     "BufReadPre " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
-     "BufNewFile " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
-   },
-   dependencies = {
-     "nvim-lua/plenary.nvim",
-     "nvim-telescope/telescope.nvim",
-     "nvim-treesitter/nvim-treesitter",
-     "hrsh7th/nvim-cmp",
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    event = {
+      "BufReadPre " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
+      "BufNewFile " .. vim.fn.expand "~" .. "/obsidian-vault/**.md",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "hrsh7th/nvim-cmp",
     },
   }
 }
