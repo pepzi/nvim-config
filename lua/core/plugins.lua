@@ -100,15 +100,6 @@ local plugins = {
     "rcarriga/nvim-notify",
     }
   },
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = true
-  },
 
   -- completion
   'hrsh7th/nvim-cmp',
