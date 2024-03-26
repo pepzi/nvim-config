@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 --  'wbthomason/packer.nvim',
---  'ellisonleao/gruvbox.nvim',
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -47,11 +46,10 @@ local plugins = {
     ft = { "rust" },
     opts = {
         server = {
-        on_attach = function(client, bufnr)
-          -- register which-key mappings
+        on_attach = function(_, bufnr)
           local wk = require("which-key")
           wk.register({
-            ["<leader>cR"] = { function() vim.cmd.RustLsp("codeAction") end, "Code Action" },
+            ["<leader>ca"] = { function() vim.cmd.RustLsp("codeAction") end, "[C]ode [A]ction" },
             ["<leader>dr"] = { function() vim.cmd.RustLsp("debuggables") end, "Rust debuggables" },
           }, { mode = "n", buffer = bufnr })
         end,
@@ -111,10 +109,6 @@ local plugins = {
   'rafamadriz/friendly-snippets',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
-  {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter'
-  },
   'neovim/nvim-lspconfig',
   {
     'mrded/nvim-lsp-notify',
@@ -136,6 +130,10 @@ local plugins = {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
   {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
+  {
   "epwalsh/obsidian.nvim",
    version = "*",
    lazy = true,
@@ -149,7 +147,7 @@ local plugins = {
      "nvim-treesitter/nvim-treesitter",
      "hrsh7th/nvim-cmp",
     },
-  },
+  }
 }
 
 local opts = {}

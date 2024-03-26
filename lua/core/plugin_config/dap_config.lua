@@ -12,7 +12,7 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
-vim.keymap.set("n", "<Leader>dt", ':DapToggleBreakpoint<CR>')
-vim.keymap.set("n", "<Leader>dx", 'DapTerminate<CR>')
-vim.keymap.set("n", "<Leader>do", 'DapStepOver<CR>')
+vim.keymap.set("n", "<Leader>dt", ':DapToggleBreakpoint<CR>', { desc = "[T]oggle Breakpoint"})
+vim.keymap.set("n", "<Leader>dx", 'DapTerminate<CR>', { desc = "Terminate"})
+vim.keymap.set("n", "<Leader>do", 'DapStepOver<CR>', {desc = "Step [O]ver"})
 

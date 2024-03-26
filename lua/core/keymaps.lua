@@ -10,20 +10,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>fb",
-  ":Telescope file_browser<CR>",
-  { noremap = true }
-)
-
--- open file_browser with the path of the current buffer
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>ff",
-  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-  { noremap = true }
-)
+vim.keymap.set('i', '<C-Space>', "<Esc><Esc><Space>", {remap = true})
 
 vim.keymap.set("n", "<space>oo", ":ObsidianQuickSwitch<CR>", { desc = "QuickSwitch" })
 vim.keymap.set("n", "<space>ot", ":ObsidianToday<CR>", { desc = "Today" })
@@ -38,6 +25,7 @@ vim.keymap.set("n", "<space>od", ":ObsidianDailies<CR>", { desc = "Dailies" })
 vim.keymap.set("n", "<space>og", ":ObsidianTags<CR>", { desc = "Ta[g]s" })
 vim.keymap.set("n", "<space>om", ":ObsidianTomorrow<CR>", { desc = "To[m]orrow" })
 vim.keymap.set("n", "<space>ow", ":ObsidianWorkspace<CR>", { desc = "Workspace" })
+vim.keymap.set("n", "<space>on", ":ObsidianNew<CR>", { desc = "New" })
 -- vim.keymap.set("n", "<space>o", ":Obsidian<CR>", { desc = "" })
 -- ObsidianDebug
 -- ObsidianExtractNote
