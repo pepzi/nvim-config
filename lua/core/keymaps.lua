@@ -12,6 +12,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('i', '<C-Space>', "<Esc><Esc><Space>", {remap = true})
 
+vim.keymap.set("n", "<space>g", ":Neogit<CR>", { desc = "Git" })
+
 vim.keymap.set("n", "<space>oo", ":ObsidianQuickSwitch<CR>", { desc = "QuickSwitch" })
 vim.keymap.set("n", "<space>ot", ":ObsidianToday<CR>", { desc = "Today" })
 vim.keymap.set("n", "<space>olf", ":ObsidianFollowLink<CR>", { desc = "Follow Link" })
