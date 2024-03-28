@@ -11,5 +11,6 @@ require("core.plugin_config.dap_config")
 require("core.plugin_config.codeium")
 require("core.plugin_config.noice")
 require("core.plugin_config.mason")
+require("core.plugin_config.rustacean")
 require("core.plugin_config.obsidian")
 
