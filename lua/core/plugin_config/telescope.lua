@@ -43,7 +43,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[S]earch [F]iles
 vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = '[R]ecent Files ("." for repeat)' })
 vim.api.nvim_set_keymap(
 'n',
-'<C-p>',
+'<leader>sp',
 ":lua require'telescope'.extensions.project.project{}<CR>",
-{noremap = true, silent = true}
+{ desc = '[S]earch [P]roject', noremap = true, silent = true}
 )

@@ -14,26 +14,26 @@ vim.keymap.set('i', '<C-Space>', "<Esc><Esc><Space>", {remap = true})
 
 vim.keymap.set("n", "<space>g", ":Neogit<CR>", { desc = "Git" })
 
-vim.keymap.set("n", "<space>oo", ":ObsidianQuickSwitch<CR>", { desc = "QuickSwitch" })
-vim.keymap.set("n", "<space>ot", ":ObsidianToday<CR>", { desc = "Today" })
-vim.keymap.set("n", "<space>olf", ":ObsidianFollowLink<CR>", { desc = "Follow Link" })
-vim.keymap.set("n", "<space>olb", ":ObsidianBacklinks<CR>", { desc = "Backlinks" })
 vim.keymap.set("n", "<space>oc", ":ObsidianCheck<CR>", { desc = "Check" })
-vim.keymap.set("n", "<space>os", ":ObsidianSearch<CR>", { desc = "Search" })
-vim.keymap.set("n", "<space>or", ":ObsidianRename<CR>", { desc = "Rename" })
-vim.keymap.set("n", "<space>oy", ":ObsidianYesterday<CR>", { desc = "Yesterday" })
-vim.keymap.set("n", "<space>op", ":ObsidianPasteImg<CR>", { desc = "Paste Image" })
 vim.keymap.set("n", "<space>od", ":ObsidianDailies<CR>", { desc = "Dailies" })
 vim.keymap.set("n", "<space>og", ":ObsidianTags<CR>", { desc = "Ta[g]s" })
+vim.keymap.set("n", "<space>olb", ":ObsidianBacklinks<CR>", { desc = "Backlinks" })
+vim.keymap.set("n", "<space>olf", ":ObsidianFollowLink<CR>", { desc = "Follow Link" })
 vim.keymap.set("n", "<space>om", ":ObsidianTomorrow<CR>", { desc = "To[m]orrow" })
-vim.keymap.set("n", "<space>ow", ":ObsidianWorkspace<CR>", { desc = "Workspace" })
 vim.keymap.set("n", "<space>on", ":ObsidianNew<CR>", { desc = "New" })
--- vim.keymap.set("n", "<space>o", ":Obsidian<CR>", { desc = "" })
--- ObsidianDebug
--- ObsidianExtractNote
--- ObsidianLink
--- ObsidianLinkNew
--- ObsidianLinks
--- ObsidianNew
--- ObsidianOpen
--- ObsidianTemplate
+vim.keymap.set("n", "<space>o<space>", ":ObsidianQuickSwitch<CR>", { desc = "QuickSwitch" })
+vim.keymap.set("n", "<space>op", ":ObsidianPasteImg<CR>", { desc = "Paste Image" })
+vim.keymap.set("n", "<space>or", ":ObsidianRename<CR>", { desc = "Rename" })
+vim.keymap.set("n", "<space>os", ":ObsidianSearch<CR>", { desc = "Search" })
+vim.keymap.set("n", "<space>ot", ":ObsidianToday<CR>", { desc = "Today" })
+vim.keymap.set("n", "<space>ow", ":ObsidianWorkspace<CR>", { desc = "Workspace" })
+vim.keymap.set("n", "<space>oy", ":ObsidianYesterday<CR>", { desc = "Yesterday" })
+vim.keymap.set("n", "<space>oll", ":ObsidianLinks<CR>", { desc = "[L]inks" })
+vim.keymap.set("n", "<space>ou", ":ObsidianDebug<CR>", { desc = "Deb[U]g" })
+vim.keymap.set("n", "<space>oe", ":ObsidianExtract<CR>", { desc = "[E]xtract Note" })
+vim.keymap.set("n", "<space>oll", ":Obsidian<CR>", { desc = "[L]ink" })
+vim.keymap.set("n", "<space>oln", ":Obsidian<CR>", { desc = "[N]ew Link" })
+vim.keymap.set("n", "<space>oo", ":Obsidian<CR>", { desc = "[O]pen" })
+vim.keymap.set("n", "<space>oa", ":ObsidianTemplate<CR>", { desc = "Templ[A]te" })
+--
+--
