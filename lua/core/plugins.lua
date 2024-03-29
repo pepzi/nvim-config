@@ -89,6 +89,10 @@ local plugins = {
     end
   },
   {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
