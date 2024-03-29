@@ -130,6 +130,9 @@ local plugins = {
   {
     'mrded/nvim-lsp-notify',
     dependencies = { { 'rcarriga/nvim-notify' }},
+    opts = {
+      inlay_hints = { enabled = true },
+    },
     config = function()
       require('lsp-notify').setup({
         notify = require('notify')
