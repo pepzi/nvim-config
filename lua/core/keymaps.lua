@@ -54,11 +54,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local function desc(description)
       return { noremap = true, silent = true, buffer = bufnr, desc = description }
     end
+    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+    vim.keymap.set('n', 'öö', vim.diagnostic.goto_prev)
+    vim.keymap.set('n', 'ää', vim.diagnostic.goto_next)
+    vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, desc('lsp [g]o to [D]eclaration'))
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, desc('lsp [g]o to [d]efinition'))
     vim.keymap.set('n', '<space>gt', vim.lsp.buf.type_definition, desc('lsp [g]o to [t]ype definition'))
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, desc('[lsp] hover'))
---    vim.keymap.set('n', '<space>pd', peek_definition, desc('lsp [p]eek [d]efinition'))
+    -- vim.keymap.set('n', '<space>pd', peek_definition, desc('lsp [p]eek [d]efinition'))
     -- vim.keymap.set('n', '<space>pt', peek_type_definition, desc('lsp [p]eek [t]ype definition'))
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, desc('lsp [g]o to [i]mplementation'))
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, desc('[lsp] signature help'))
