@@ -201,6 +201,10 @@ local plugins = {
       })
     end,
   },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+  },
 }
 
 local opts = {}

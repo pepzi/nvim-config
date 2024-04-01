@@ -13,7 +13,7 @@ require("core.plugin_config.noice")
 require("core.plugin_config.mason")
 require("core.plugin_config.rustacean")
 require("core.plugin_config.obsidian")
-
+require("core.plugin_config.general")
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
 

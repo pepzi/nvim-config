@@ -37,6 +37,17 @@ vim.keymap.set("n", "<space>oln", ":Obsidian<CR>", { desc = "[N]ew Link" })
 vim.keymap.set("n", "<space>oo", ":Obsidian<CR>", { desc = "[O]pen" })
 vim.keymap.set("n", "<space>oa", ":ObsidianTemplate<CR>", { desc = "Templ[A]te" })
 
+local wk = require("which-key")
+wk.register({
+  -- flash Search
+  l = {
+    name = "flash",
+    s = { function() require("flash").jump() end, "Flash Jump"},
+    t = { function() require("flash").treesitter() end, "Flash Treesitter"},
+    r = { function() require("flash").treesitter_search() end, "Flash Treesitter Search"},
+  },
+}, { prefix = "<leader>" })
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
