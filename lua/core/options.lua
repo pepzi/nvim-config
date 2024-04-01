@@ -16,4 +16,7 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.opt.conceallevel = 1
-vim.wo.number = true
+vim.wo.relativenumber = true
+
+vim.opt.undodir = '/home/robert/.vimdid'
+vim.opt.undofile=true
