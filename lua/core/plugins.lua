@@ -109,6 +109,7 @@ local plugins = {
   },
   {
     "NeogitOrg/neogit",
+    branch = 'nightly',
     dependencies = {
       "nvim-lua/plenary.nvim",         -- required
       "sindrets/diffview.nvim",        -- optional - Diff integration
@@ -205,6 +206,7 @@ local plugins = {
     "folke/flash.nvim",
     event = "VeryLazy",
   },
+  'nvimdev/lspsaga.nvim'
 }
 
 local opts = {}
