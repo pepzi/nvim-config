@@ -160,47 +160,25 @@ local plugins = {
 		end,
 	},
 	{
-		-- ! collection of functions that help setup lsp client
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v3.x",
-		dependencies = {
-			-- collection of lsp configs
-			"neovim/nvim-lspconfig",
-		},
-		config = function()
-			local lsp = require("lsp-zero").preset({})
-			-- Format on save
-			lsp.format_on_save({
-				format_opts = {
-					async = false,
-					timeout_ms = 10000,
-				},
-				servers = {
-					["rust-analyzer"] = { "rust" },
-				},
-			})
-		end,
-	},
-	{
 		-- code diagnostics, references etc
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-	-- {
-	--   "folke/noice.nvim",
-	--   event = "VeryLazy",
-	--   opts = {
-	--     -- add any options here
-	--   },
-	--   dependencies = {
-	--     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-	--     "MunifTanjim/nui.nvim",
-	--     -- OPTIONAL:
-	--     --   `nvim-notify` is only needed, if you want to use the notification view.
-	--     --   If not available, we use `mini` as the fallback
-	--     "rcarriga/nvim-notify",
-	--   }
-	-- },
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- add any options here
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+	},
 	{
 		-- git ui
 		"NeogitOrg/neogit",
