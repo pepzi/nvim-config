@@ -20,3 +20,5 @@ vim.wo.relativenumber = true
 
 vim.opt.undodir = '/home/robert/.vimdid'
 vim.opt.undofile=true
+
+vim.g.rustfmt_autosave = 1

@@ -1,4 +1,3 @@
-local api = vim.api
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>')
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -10,6 +9,7 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<space>n', ":tabNext<CR>", { desc = 'Next tab'} )
 
 vim.keymap.set('i', '<C-Space>', "<Esc><Esc><Space>", {remap = true})
 
@@ -38,15 +38,6 @@ vim.keymap.set("n", "<space>oo", ":Obsidian<CR>", { desc = "[O]pen" })
 vim.keymap.set("n", "<space>oa", ":ObsidianTemplate<CR>", { desc = "Templ[A]te" })
 
 local wk = require("which-key")
-wk.register({
-  a = {
-    name = "flash",
-    s = { function() require("flash").jump() end, "Flash Jump"},
-    t = { function() require("flash").treesitter() end, "Flash Treesitter"},
-    r = { function() require("flash").treesitter_search() end, "Flash Treesitter Search"},
-  },
-}, { prefix = "<leader>" })
-
 wk.register({
   l = {
     name = "Lspsaga",
