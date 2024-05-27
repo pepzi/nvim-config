@@ -16,6 +16,7 @@ local plugins = {
 	--  'wbthomason/packer.nvim',
 	-- theme
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	"ahmedkhalf/project.nvim",
 	-- file explorer tree
 	"nvim-tree/nvim-tree.lua",
 	-- filesystem editor
