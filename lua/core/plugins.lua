@@ -221,6 +221,11 @@ local plugins = {
 		end,
 	},
 	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	{
 		-- fuzzy finder over lists
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
