@@ -213,13 +213,14 @@ local plugins = {
 				end,
 				desc = "Noice All",
 			},
-			{
-				"<leader>snd",
-				function()
-					require("noice").cmd("dismiss")
-				end,
-				desc = "Dismiss All",
-			},
+			-- Doesn't work for me, infinite loop of Notify messages
+			-- {
+			-- 	"<leader>snd",
+			-- 	function()
+			-- 		require("noice").cmd("dismiss")
+			-- 	end,
+			-- 	desc = "Dismiss All",
+			-- },
 			{
 				"<c-f>",
 				function()
